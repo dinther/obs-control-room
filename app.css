@@ -1,0 +1,352 @@
+body {
+    overflow: hidden;
+}
+
+.appcontainer {
+    box-sizing: border-box;
+    --color: #ffffff;
+    --backgroundcolor: #737373;
+    --menuHighlight: #EEEEEE;
+    --menuseperator: #EBEBEB;
+    --popcolor: #282a36;
+    -webkit-font-smoothing: antialiased;
+    font-size: .875rem;
+    letter-spacing: .2px;
+    scroll-behavior: smooth;
+    font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+    color: var(--color);
+    overflow: hidden auto;
+    user-select: none;
+    background-color:var(--backgroundcolor);
+}
+
+.apptitle{
+    font-size: 16px;;
+}
+
+.appcontainer * {
+    box-sizing: border-box;
+}
+
+.appcontainer h1{
+    font-size: 16px;
+    display: inline-block;
+    margin: 5px 10px 5px 0px;
+}
+
+#controllers {
+    display: flex;
+    margin: 0px;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.controller {
+    border-bottom: 2px solid #ffffff;
+    padding: 5px;
+    position: relative;
+    display: grid;
+    grid-template-areas:    "head"
+                            "cont";
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content 1fr;
+    fill: white;
+}
+
+.controller .header{
+    display: flex;
+    padding-bottom: 3px;
+}
+
+.controller .header div{
+    display: inline-block;
+    align-self: center;
+}
+
+.controller .menu {
+    width: 50px;
+}
+
+.controller .reference {
+    width: 90px;
+    margin-left: 5px;
+}
+
+.controller .title {
+    flex-grow: 1;
+}
+
+.controller .content{
+    display: flex;
+    flex-wrap: wrap;
+    grid-area: cont;
+    overflow: hidden;
+    transition: height 300ms;
+}
+
+.obsserver {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.obsserver label{
+    white-space: nowrap;
+    text-align: right;
+    width: 280px;
+}
+
+.obsserver input{
+    margin: 0 10px 0 10px;
+    float: right;
+}
+
+.obsserver button{
+    margin: 0 0 0 0;
+}
+
+.content.gamepad{
+    display: grid;
+}
+
+.content.midi .messages {
+    height: 135px;
+    width: 420px;
+    overflow: hidden auto;
+    margin: 0px 5px 5px 0;
+    padding: 0px 5px 0px 5px;
+    display: grid;
+    grid-template-columns: 27px 123px 39px 71px 122px;
+    background-color: #e0e0e0;
+    color: #393939;
+    font: normal normal 400 15px monospace;
+    box-shadow: inset 2px 1px 3px #464646;
+    border-radius: 2.5px;
+    grid-auto-rows: min-content;
+}
+
+.content.midi .messages span{
+    margin: 0px 5px 0px 5px;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.content.midi .messages .str{
+    text-align: left;
+    margin-left: 6px;
+}
+
+.controller.script{
+    flex-grow: 1;
+    height: 350px;
+}
+
+.controller.console{
+    border-bottom: none;
+}
+
+.header {
+    display: inline-block;
+}
+
+.header label {
+    margin-left: 20px;
+}
+
+.controllericon{
+    height:24px;
+    width:24px;
+}
+
+.controllericon.rotate{
+    transform-origin: 50% 50%;
+    transform: rotate(-90deg);
+}
+
+.logo{
+    margin: 0 0 0 5px;
+    vertical-align: middle;
+}
+
+#version {
+    position: absolute;
+    font-size: 9px;
+}
+
+
+.buttons{
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 5px;
+}
+
+.buttonvalue{
+    margin-top: 3px;
+    display: block;
+    display: block;
+    text-align: right;
+    font-size: 150%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.axes {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.axis {
+    border: 2px solid var(--backgroundcolor);
+    transition: opacity 2000ms, background-color 2000ms;
+    min-width: 300px;
+    flex-grow: 1;
+}
+ 
+.axis progress{
+    display: block;
+    width: 100%;
+}
+
+.button {
+    color: #ffffff;
+    padding: 3px;
+    font-size: 12px;
+    border-radius: 3px;
+    background-color: #000000;
+    opacity: 0.3;
+    width: 44px;
+    height: 44px;
+    margin: 0 5px 5px 0;
+}
+  
+.on {
+    border: 2px solid red;
+    background-color: #751f04;
+    opacity: 1;
+    transition: none;
+}
+
+.scripttext{
+    position: relative;
+    min-height: 300px;
+}
+
+.keys {
+    --whitewidth: 30px;
+    --blackwidth: calc(var(--whitewidth) / 2);
+    --blackmargin: calc(calc(var(--blackwidth) / 2) * -1);
+    --whitelength: calc(var(--whitewidth) * 4.5);
+    --blacklength: calc(var(--whitewidth) * 2.5);
+    --keyradius: calc(var(--whitewidth) / 8);
+    padding: 0px;
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 0px 5px 5px 0;
+}
+
+li {
+    margin:0;
+    padding:0;
+    list-style:none;
+    position:relative;
+    float:left
+  }
+  
+  ul .white {
+    height:var(--whitelength);
+    width:var(--whitewidth);
+    z-index:1;
+    border-left:1px solid #bbb;
+    border-bottom:1px solid #bbb;
+    border-radius:0 0 var(--keyradius) var(--keyradius);
+    box-shadow:-1px 0 0 rgba(255,255,255,0.8) inset,0 0 5px #ccc inset,0 0 3px rgba(0,0,0,0.2);
+    background:linear-gradient(to bottom,#eee 0%,#fff 100%)
+  }
+  
+  .white.down {
+    border-top:1px solid #777;
+    border-left:1px solid #999;
+    border-bottom:1px solid #999;
+    box-shadow:2px 0 3px rgba(0,0,0,0.1) inset,-5px 5px 20px rgba(0,0,0,0.2) inset,0 0 3px rgba(0,0,0,0.2);
+    background:linear-gradient(to bottom,#fff 0%,#e9e9e9 100%)
+  }
+  
+  .black {
+    height:var(--blacklength);
+    width:var(--blackwidth);
+    margin:0 0 0 var(--blackmargin);
+    z-index:2;
+    border:1px solid #000;
+    border-radius:0 0 var(--keyradius) var(--keyradius);
+    box-shadow:-1px -1px 2px rgba(255,255,255,0.2) inset,0 -5px 2px 3px rgba(0,0,0,0.6) inset,0 2px 4px rgba(0,0,0,0.5);
+    background:linear-gradient(45deg,#222 0%,#555 100%)
+  }
+  
+  .black.down {
+    box-shadow:-1px -1px 2px rgba(255,255,255,0.2) inset,0 -2px 2px 3px rgba(0,0,0,0.6) inset,0 1px 2px rgba(0,0,0,0.5);
+    background:linear-gradient(to right,#444 0%,#222 100%)
+  }
+  
+  .d,.g,.e,.a,.b {
+    margin:0 0 0 var(--blackmargin);
+  }
+  
+  ul li:first-child {
+    border-radius:var(--keyradius) 0 var(--keyradius) var(--keyradius)
+  }
+  
+  ul li:last-child {
+    border-radius:0 var(--keyradius) var(--keyradius) var(--keyradius)
+  }
+
+.custombutton {
+    float: right;
+    margin-left: 10px;
+    width: 60px;
+}
+
+.controller .console {
+    flex-direction: column;
+    margin-bottom: 0px;
+    border-bottom: none;
+    overflow-x: hidden;
+}
+
+.controller .console {
+    color: black;
+    background-color: white;
+    font: normal normal 400 13px monospace;
+    overflow: hidden auto;
+    height: 160px;
+}
+
+  .consolelog div{
+      padding: 5px 15px 5px 15px;
+      border-bottom: solid 1px silver;
+  }
+
+  .lognumber{
+      color: blue;
+  }
+
+  .logstring{
+      color: black;
+  }
+
+  .logobject{
+      color:gray;
+      white-space: pre;
+  }
+
+  .logcustomevent{
+    white-space: pre;
+    color:gray;
+  }
+
+.controller.collapse{
+    flex-grow: 0;
+    height: unset;
+}
+
+.controller .content.collapse{
+    height: 0px;
+}

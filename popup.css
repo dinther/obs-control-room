@@ -1,0 +1,105 @@
+.pop_modal {
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    background-color: #00000042;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.pop_nonmodal {
+    z-index: 1000;
+    flex-direction: column;
+}
+
+.pop_spacer {
+    flex-grow: 0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.pop_container {
+    position: absolute;
+    box-shadow: 0px 2px 15px 2px #0000007a;
+    background-color: #ffffff;
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.pop_menu {
+    color: #282a36;
+    margin: 6px;
+    padding: 0;
+}
+
+.pop_menuitem {
+    line-height: 20px;
+    display: flex;
+    padding: 6px 48px 6px 0px;
+    align-items: center;
+    fill: #737373;
+}
+
+.pop_menuicon {
+    width:20px;
+    height:20px;
+    margin: 0 10px;
+}
+
+.pop_menuitem:hover {
+    background-color: #EEEEEE;
+}
+
+.pop_separator {
+    height: 5px;
+    border-bottom: 1px solid #EBEBEB;
+    margin: 0 5px 5px 5px;
+}
+
+.pop_buttons {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10px;
+}
+
+.pop_button {
+    flex-grow: 1;
+    margin: 0px 5px;
+    max-width: 90px;
+}
+
+
+
+.pop_dialog {
+    align-self: center;
+    color: #282a36;
+    padding: 20px;
+    max-width: 80%;
+}
+
+.pop_message {
+    text-align: center;
+}
+
+.pop_hidden {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
