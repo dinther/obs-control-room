@@ -1,6 +1,6 @@
 var sw = null;
 var refreshing;
-var app = 'dominator';
+var app = 'OBS Control Room';
 var settings = loadSettings();
 var gamepadDevices = new Map();
 var midiDevices = new WeakMap();

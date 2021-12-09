@@ -1,7 +1,7 @@
 {
-    "name": "OBS Dominator",
+    "name": "OBS Control Room",
     "categories": ["productivity", "utilities", "video", "technology", "streaming"],
-    "short_name": "OBS Dominator",
+    "short_name": "OBS Control Room",
     "description": "Scripted Gamepad and MIDI powered remote control app for OBS.",
 	"icons": [
         {"src": "./icons/icon_144.png", "sizes": "144x144", "type": "image/png" },

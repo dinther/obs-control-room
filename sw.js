@@ -1,8 +1,8 @@
 // TODO: increase `version` number to force cache update when publishing a new release
 
 const sw_config = {
-    version: 'v192',
-    app: 'OBS Dominator',
+    version: 'v193',
+    app: 'OBS Control Room',
     cacheRemote: false, //Set to true if you want resources from other domains to be cached
     devMode: true, //Set to true to ensure resources are always first loaded from the network (easier for testing)
     matchOptions: { ignoreSearch: true}, //See https://developer.mozilla.org/en-US/docs/Web/API/Cache/match
