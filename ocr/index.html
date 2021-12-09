@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" class="nowhitespace">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>OBS Control Room</title>
+        <meta name="Description" content="Scripted Gamepad and MIDI powered remote control app for OBS.">
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,width=device-width user-scalable=no">
+        <!-- Disable tap highlight on IE -->
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="theme-color" content="#ffffff">
+        <link rel="manifest" href="./manifest.json">
+        <!-- Add to homescreen for Chrome on Android -->
+        <meta name="mobile-web-app-capable" content="yes">
+        <link asyc rel="icon" sizes="144x144" href="./icons/icon_144.png">
+        <link asyc rel="icon" sizes="192x192" href="./icons/icon_192.png">
+        <link asyc rel="icon" sizes="256x256" href="./icons/icon_256.png">
+        <link asyc rel="icon" sizes="512x512" href="./icons/icon_512.png">
+        <link asyc rel="apple-touch-icon" href="./icons/icon_192.png">
+        <!-- Add to homescreen for Safari on iOS -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-title" content="OBS Control Room">
+        <link asyc rel="apple-touch-icon-precomposed" href="./icons/icon_180.png">
+        <link asyc rel="mask-icon" href="./icons/icon.svg" color="#5bbad5">
+        <!-- Tile color for Windows -->
+        <meta name="msapplication-TileImage" content="./icons/icon_150.png">
+        <meta name="msapplication-TileColor" content="#ffc40d">
+        <script defer type='text/javascript' src='./lib/obs-websocket.js'></script>
+        <script defer type='text/javascript' src='./lib/midimanager.js'></script>
+        <script defer type='text/javascript' src='./lib/gamepadmanager.js'></script>
+        <script defer type='text/javascript' src='./lib/popup.js'></script>
+        <script defer type='text/javascript' src='./lib/dialog.js'></script>
+        <script defer type='text/javascript' src='./lib/obsmanager.js'></script>
+        <script defer type="text/javascript" src="./lib/ace.js"></script>
+        <script defer type="text/javascript" src="./lib/iconfactory.js"></script>
+        <script defer type="text/javascript" src="./app.js"></script>
+        <link rel="stylesheet" href="./app.css">
+        <link rel="stylesheet" href="./popup.css">
+
+        <!-- Place favicon.ico in the root directory -->
+        <link asyc rel="icon" type="image/png" sizes="96x96" href="./icons/icon_96.png">
+        <link asyc rel="icon" type="image/png" sizes="32x32" href="./icons/icon_32.png">
+        <link asyc rel="icon" type="image/png" sizes="16x16" href="./icons/icon_16.png">
+        <style>
+            .nowhitespace { margin: 0; padding: 0; }
+        </style>
+    </head>
+    <body class="nowhitespace">
+        <div class="appcontainer">
+            <div id="version"></div>
+            <div id="controllers"></div>
+        </div>   
+    </body>
+</html>
