@@ -1,4 +1,5 @@
 # obs-control-room
 
-<img width="1273" height="1432" alt="{10EB682A-405C-4149-89AE-7EC7C9A69F1F}" src="https://github.com/user-attachments/assets/114a4eb7-0fc4-4751-ba5d-1cf4fd3cf83b" />
+<img width="859" height="667" alt="{EB043133-C6D0-4FAA-8E80-D89F0B1A49A7}" src="https://github.com/user-attachments/assets/06601894-3965-469b-a8eb-3e7b7efebc87" />
+
 
